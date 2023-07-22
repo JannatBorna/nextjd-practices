@@ -41,7 +41,7 @@ const RootLayout = ({ children }) => {
                 </items>
             </Link>    
 
-            <Link href="/allBlogs">
+            <Link href="/about">
                 <items
                 style={{
                     margin: "0px 30px"
@@ -52,7 +52,7 @@ const RootLayout = ({ children }) => {
                 </items>
             </Link>    
 
-            <Link href="/allBlogs">
+            <Link href="/contact">
                 <items>
                  <MobileOutlined />
                  Contact Us
