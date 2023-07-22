@@ -1,4 +1,4 @@
-import { Button } from 'antd';
+import RootLayout from '@/components/Layouts/RootLayout';
 import React from 'react';
 
 const HomePage = () => {
@@ -11,3 +11,11 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+HomePage.getLayout = function getLayout(page){
+  return (
+    <RootLayout>
+      {page}
+    </RootLayout>
+  )
+}
