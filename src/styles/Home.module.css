@@ -8,3 +8,12 @@
 .layout{
   background-color: #1f1f1f;
 }
+.line{
+  border: 1px solid #878787;
+}
+
+.social_icons a{
+    font-size: 28px;
+    margin: 15px 3px;
+    color: #000;
+}

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Breadcrumb, Col, Layout, Menu, Row, theme } from 'antd';
 import Image from 'next/image';
 import logo from '@/assets/images/logo.png';
 import Link from 'next/link';
-import { MobileOutlined, ProfileOutlined, UserOutlined } from '@ant-design/icons';
+import { FacebookFilled, FacebookOutlined, GoogleSquareFilled, LinkedinFilled, MobileOutlined, ProfileOutlined, TwitterSquareFilled, UserOutlined } from '@ant-design/icons';
 import styles  from '@/styles/Home.module.css';
 const { Header, Content, Footer } = Layout;
 
@@ -69,12 +69,34 @@ const RootLayout = ({ children }) => {
         { children }
 
       </Content>
-      <Footer
+            <Footer
         style={{
-          textAlign: 'center',
+          textAlign: "center",
         }}
       >
-        Ant Design ©2023 Created by Ant UED
+        <div className={styles.line}></div>
+        <h2
+          style={{
+            fontSize: "28px",
+          }}
+        >
+          BLOG PORTAL
+        </h2>
+        <p className={styles.social_icons}>
+          <Link href="https://web.facebook.com/groups/programmingherocommunity">
+            <FacebookFilled />
+          </Link>
+          <Link href="www.twitter.com">
+            <TwitterSquareFilled />
+          </Link>
+          <Link href="https://web.programming-hero.com/home/">
+            <GoogleSquareFilled />
+          </Link>
+          <Link href="www.linkedin.com">
+            <LinkedinFilled />
+          </Link>
+        </p>
+        Blog Portal ©2023 Created by Programming Hero
       </Footer>
     </Layout>
   );
