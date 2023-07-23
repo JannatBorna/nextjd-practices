@@ -97,10 +97,9 @@ const HomeAllBlogs = ({allBlogs}) => {
                         </p>
                         </Link>
               </Card>
-
-    </Col>
-    ))}
-  </Row>
+            </Col>
+          ))}
+      </Row>
         </>
     );
 };
