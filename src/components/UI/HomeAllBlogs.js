@@ -3,21 +3,31 @@ import { Card, Col, Row } from "antd";
 import Image from "next/image";
 import { useState } from "react";
 import styles  from '@/styles/Home.module.css';
+import Link from "next/link";
 
 
 const HomeAllBlogs = ({allBlogs}) => {
-  const [limit, setLimit] = useState(4);
+  const [limit, setLimit] = useState(8);
   console.log(setLimit);
 
   const {Meta} = Card;
     return (
       <>
+      <h1
+        style={{
+            textAlign: "center",
+            fontSize: "50px",
+            margin:"30px 0px",
+        }}
+        >
+    #TODAY HIGHLIGHT
+</h1>
         <Row>
           {
-          allBlogs.slice(0, limit ? limit : allBlogs.length).map((blog) =>(
+          allBlogs.slice(0, limit ? limit : allBlogs.length).map((blogs) =>(
               <Col 
               xs={24} sm={24} md={12} lg={6} 
-              key={blog.id}
+              key={blogs?.id}
 
               >
 
@@ -26,7 +36,7 @@ const HomeAllBlogs = ({allBlogs}) => {
               hoverable
                   cover={
                   <Image
-                    src={blog?.image_url}
+                    src={blogs?.image_url}
                     width={500}
                     height={200}
                     responsive
@@ -34,7 +44,7 @@ const HomeAllBlogs = ({allBlogs}) => {
                   />
                   }
               >
-                <Meta title={blog.title}/>
+                <Meta title={blogs?.title}/>
                 <div
                   style={{
                     height:"5px",
@@ -54,37 +64,38 @@ const HomeAllBlogs = ({allBlogs}) => {
                 }}
                 >
                 <span>
-                    <CalendarOutlined /> {blog?.release_date}
+                    <CalendarOutlined /> {blogs?.release_date}
                 </span>
                 <span>
-                    <CommentOutlined /> {blog?.comment_count} comment
+                    <CommentOutlined /> {blogs?.comment_count} comment
                 </span>
                 <span>
-                    <ProfileOutlined /> {blog?.category}
+                    <ProfileOutlined /> {blogs?.category}
                 </span>
                 </p>
 
                  <p style={{fontSize: "15px"}}>
-                  {blog?.description.length > 100
-                  ? blog?.description.slice(0,70) + "..."
-                  : blog?.description}
+                  {blogs?.description.length > 100
+                  ? blogs?.description.slice(0,70) + "..."
+                  : blogs?.description}
                   </p>
-
-                  <p
-                    style={{
-                        fontSize:"15px",
-                        marginTop:"20px",
-                        backgroundColor:"black",
-                        color:"white",
-                        width: "100%",
-                        padding: "2px 5px",
-                        fontWeight: "300",
-                        letterSpacing: "3px",
-                        textAlign: "center",
-                    }}
-                  >
-                     Keep Reading <ArrowDownOutlined />
-                  </p>
+                  <Link href={`/blog/${blogs?.id}`}>
+                            <p
+                        style={{
+                            fontSize:"15px",
+                            marginTop:"20px",
+                            backgroundColor:"black",
+                            color:"white",
+                            width: "100%",
+                            padding: "2px 5px",
+                            fontWeight: "300",
+                            letterSpacing: "3px",
+                            textAlign: "center",
+                        }}
+                        >
+                            Keep Reading <ArrowDownOutlined />
+                        </p>
+                        </Link>
               </Card>
 
     </Col>

@@ -1,7 +1,7 @@
 import RootLayout from '@/components/Layouts/RootLayout';
 import HomeAllBlogs from '@/components/UI/HomeAllBlogs';
 import Banner from '@/components/UI/Banner';
-import BlogsPage from './blogs';
+import AllBlogsPage from './allBlogs';
 
 
 const HomePage = ({allBlogs}) => {
@@ -9,7 +9,6 @@ const HomePage = ({allBlogs}) => {
     <div>
        <Banner />
        <HomeAllBlogs allBlogs={allBlogs}/>
-       <BlogsPage allBlogs={allBlogs}/>
     </div>
   );
 };
@@ -26,8 +25,7 @@ HomePage.getLayout = function getLayout(page){
 
 
 // data fetching
-// export const getServerSideProps = async () => {
-  export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch("http://localhost:5000/blogs");
   const data = await res.json();
   console.log(data);

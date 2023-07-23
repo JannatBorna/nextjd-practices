@@ -71,7 +71,7 @@
             "release_date": "July 18, 2023",
             "category": "Healthy Food",
             "comment_count": 10,
-            "image_url": "/images/coffee.jpg"
+            "image_url": "/images/healthy-food.jpg"
         },
 
         {
@@ -82,7 +82,7 @@
             "release_date": "June 12, 2023",
             "category": "Socal Media",
             "comment_count": 10,
-            "image_url": "/images/coffee.jpg"
+            "image_url": "/images/socal-media.jpg"
         },
 
         {
@@ -93,7 +93,7 @@
             "release_date": "June 12, 2023",
             "category": "Skin care",
             "comment_count": 10,
-            "image_url": "/images/coffee.jpg"
+            "image_url": "/images/skin-care.jpg"
         }
     ]
 }
