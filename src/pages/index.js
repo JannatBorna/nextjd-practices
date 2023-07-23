@@ -1,13 +1,15 @@
 import RootLayout from '@/components/Layouts/RootLayout';
 import HomeAllBlogs from '@/components/UI/HomeAllBlogs';
 import Banner from '@/components/UI/Banner';
-import React from 'react';
+import BlogsPage from './blogs';
+
 
 const HomePage = ({allBlogs}) => {
   return (
     <div>
        <Banner />
        <HomeAllBlogs allBlogs={allBlogs}/>
+       <BlogsPage allBlogs={allBlogs}/>
     </div>
   );
 };
@@ -32,7 +34,7 @@ HomePage.getLayout = function getLayout(page){
   return {
     props:{
 
-      allBlogs: data,
+      allBlogs: data, // nextjs data fetching
     },
   };
 };

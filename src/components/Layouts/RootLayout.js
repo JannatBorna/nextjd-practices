@@ -34,7 +34,7 @@ const RootLayout = ({ children }) => {
           mode="vertical"
           className={styles.manu_item}
         >
-            <Link href="/allBlogs">
+            <Link href="/blogs">
                 <items>
                    <ProfileOutlined  />
                    All Blogs 
