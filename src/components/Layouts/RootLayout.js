@@ -3,7 +3,7 @@ import { Breadcrumb, Col, Layout, Menu, Row, theme } from 'antd';
 import Image from 'next/image';
 import logo from '@/assets/images/logo.png';
 import Link from 'next/link';
-import { FacebookFilled, FacebookOutlined, GoogleSquareFilled, LinkedinFilled, MobileOutlined, ProfileOutlined, TwitterSquareFilled, UserOutlined } from '@ant-design/icons';
+import { FacebookFilled, FacebookOutlined, GoogleSquareFilled, HomeOutlined, LinkedinFilled, MobileOutlined, ProfileOutlined, TwitterSquareFilled, UserOutlined } from '@ant-design/icons';
 import styles  from '@/styles/Home.module.css';
 const { Header, Content, Footer } = Layout;
 
@@ -34,6 +34,17 @@ const RootLayout = ({ children }) => {
           mode="vertical"
           className={styles.manu_item}
         >
+
+            <Link href="/">
+                <items
+                  style={{
+                  margin: "0px 30px"
+                  }}>
+                   <HomeOutlined />
+                   Home 
+                </items>
+            </Link>    
+
             <Link href="/allBlogs">
                 <items>
                    <ProfileOutlined  />

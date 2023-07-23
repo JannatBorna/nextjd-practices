@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 const HomeAllBlogs = ({allBlogs}) => {
-  const [limit, setLimit] = useState(8);
+  const [limit, setLimit] = useState(4);
   console.log(setLimit);
 
   const {Meta} = Card;
