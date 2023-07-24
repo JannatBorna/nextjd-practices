@@ -1,7 +1,6 @@
 import RootLayout from '@/components/Layouts/RootLayout';
 import HomeAllBlogs from '@/components/UI/HomeAllBlogs';
 import Banner from '@/components/UI/Banner';
-import AllBlogsPage from './allBlogs';
 import Head from 'next/head';
 import { useGetBlogsQuery } from '@/redux/api/apiSlice';
 
@@ -27,7 +26,7 @@ console.log(error)
         <link rel="icon" href="/favicon.ico" />
       </Head>
        <Banner />
-        {/* <HomeAllBlogs allBlogs={allBlogs}/> */}
+        {/* <HomeAllBlogs allBlogs={allBlogs}/> */}  {/* nextjs */}
         <HomeAllBlogs allBlogs={data}/> {/* redux */}
     </>
   );
