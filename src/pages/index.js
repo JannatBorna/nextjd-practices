@@ -1,11 +1,25 @@
 import RootLayout from '@/components/Layouts/RootLayout';
 import HomeAllBlogs from '@/components/UI/HomeAllBlogs';
-import Banner from '@/components/UI/Banner';
+// import Banner from '@/components/UI/Banner';
 import Head from 'next/head';
 import { useGetBlogsQuery } from '@/redux/api/apiSlice';
+import { Space, Spin } from 'antd';
+import dynamic from 'next/dynamic';
 
 
 const HomePage = ({allBlogs}) => {
+const DynamicBanner = dynamic(() => import('@/components/UI/Banner'),{
+  loading: () => <Space size="middle"
+                  style={{
+                  marginLeft: "50em",
+                  marginTop: "15%",
+                }}>
+                  <Spin size="large" />
+                </Space>,
+                
+                
+  ssr: false,
+})
 
 // redux
 const {data, isLoading, isError, error} = useGetBlogsQuery()
@@ -25,7 +39,7 @@ console.log(error)
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-       <Banner />
+       <DynamicBanner />
         {/* <HomeAllBlogs allBlogs={allBlogs}/> */}  {/* nextjs */}
         <HomeAllBlogs allBlogs={data}/> {/* redux */}
     </>
