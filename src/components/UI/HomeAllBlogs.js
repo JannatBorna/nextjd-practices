@@ -24,7 +24,7 @@ const HomeAllBlogs = ({allBlogs}) => {
 </h1>
         <Row>
           {
-          allBlogs.slice(0, limit ? limit : allBlogs.length).map((blogs) =>(
+          allBlogs?.slice(0, limit ? limit : allBlogs.length).map((blogs) =>(
               <Col 
               xs={24} sm={24} md={12} lg={6} 
               key={blogs?.id}

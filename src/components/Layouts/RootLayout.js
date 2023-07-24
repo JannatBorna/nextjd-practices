@@ -91,7 +91,7 @@ const RootLayout = ({ children }) => {
             fontSize: "28px",
           }}
         >
-          BLOG PORTAL
+          BLOGS PORTAL
         </h2>
         <p className={styles.social_icons}>
           <Link href="https://web.facebook.com/groups/programmingherocommunity">
@@ -107,7 +107,7 @@ const RootLayout = ({ children }) => {
             <LinkedinFilled />
           </Link>
         </p>
-        Blog Portal ©2023 Created by Programming Hero
+        Blogs Portal ©2023 Created by Programming Hero
       </Footer>
     </Layout>
   );

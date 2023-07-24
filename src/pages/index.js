@@ -2,14 +2,34 @@ import RootLayout from '@/components/Layouts/RootLayout';
 import HomeAllBlogs from '@/components/UI/HomeAllBlogs';
 import Banner from '@/components/UI/Banner';
 import AllBlogsPage from './allBlogs';
+import Head from 'next/head';
+import { useGetBlogsQuery } from '@/redux/api/apiSlice';
 
 
 const HomePage = ({allBlogs}) => {
+
+// redux
+const {data, isLoading, isError, error} = useGetBlogsQuery()
+console.log(data)
+console.log(isLoading)
+console.log(isError)
+console.log(error)
+
   return (
-    <div>
+    <>
+      <Head>
+        <title>Blogs Portal</title>
+        <meta
+          name="description"
+          content="This is news portal of programming hero made by next-js"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
        <Banner />
-       <HomeAllBlogs allBlogs={allBlogs}/>
-    </div>
+        {/* <HomeAllBlogs allBlogs={allBlogs}/> */}
+        <HomeAllBlogs allBlogs={data}/> {/* redux */}
+    </>
   );
 };
 

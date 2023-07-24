@@ -1,11 +1,20 @@
 import { CalendarOutlined, CommentOutlined, EditOutlined, EllipsisOutlined, ProfileOutlined, SettingOutlined } from "@ant-design/icons";
-import { Col, Row } from "antd";
+import { Col, Row, Spin } from "antd";
 import Image from "next/image";
 import styles  from '@/styles/Home.module.css';
 import RootLayout from "@/components/Layouts/RootLayout";
+import { useGetBlogQuery } from "@/redux/api/apiSlice";
 
 
 const BlogDetailPage = ({blogs}) => {
+    // const { blogId } = blogs.params
+    // const { data: blogs, isFetching, isSuccess } = useGetBlogQuery(blogId)
+
+
+//   if (isFetching) {
+    // <Spin size="large" />
+//   } 
+//   else if (isSuccess) {
 
     return (
       <div>
@@ -73,7 +82,7 @@ const BlogDetailPage = ({blogs}) => {
     </div>
     );
 };
-
+//   }
 export default BlogDetailPage;
 
 BlogDetailPage.getLayout = function getLayout(page) {
