@@ -98,7 +98,8 @@ export const getServerSideProps = async (context) => {
 
     return{
         props: {
-           blogs: data, // nextjs data fetching
+          //  blogs: data, // nextjs data fetching
+           blogs: data,
         }
     }
 }

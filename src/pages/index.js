@@ -41,7 +41,8 @@ console.log(error)
       </Head>
        <DynamicBanner />
         {/* <HomeAllBlogs allBlogs={allBlogs}/> */}  {/* nextjs */}
-        <HomeAllBlogs allBlogs={data}/> {/* redux */}
+        {/* <HomeAllBlogs allBlogs={data}/>*/} {/* redux */}
+        <HomeAllBlogs allBlogs={allBlogs} /> {/* mongodb */}
     </>
   );
 };
@@ -59,13 +60,15 @@ HomePage.getLayout = function getLayout(page){
 
 // data fetching
 export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:5000/blogs");
+  // const res = await fetch("http://localhost:5000/blogs") // nextjs and redux
+  const res = await fetch("http://localhost:3000/api/blogs");
   const data = await res.json();
   console.log(data);
   return {
     props:{
 
-      allBlogs: data, // nextjs data fetching
+      // allBlogs: data, // nextjs data fetching and redux data fetching
+      allBlogs: data.data, // mongodb data fetching
     },
   };
 };
