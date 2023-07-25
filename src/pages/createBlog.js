@@ -1,13 +1,13 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import { useForm } from "react-hook-form"
+import swal from "sweetalert";
 // import swal from "sweetalert";
 
 const CreateBlogPage = () => {
     
-    const { register, handleSubmit } = useForm();
-
-    const onSubmit = (data) => {
-    fetch("/api/blogs", {
+    const { register, handleSubmit } = useForm()
+     const onSubmit = (data) => {
+       fetch("/api/blogs", {
         method: "POST",
         headers: {
             "content-type": "application/json",
@@ -18,14 +18,15 @@ const CreateBlogPage = () => {
     .then((res) => res.json())
     .then((data) => {
         if(data.insertedId){
-            // swal("Good job!", "You clicked the button!", "success")
-                        alert("News Successfully Created");
-    console.log(data)
+            // alert("News Successfully Created");
+            swal("Good job!", "Blog Successfully Created!", "success")
         }
     });
 };
-    return (
-        <div>
+
+
+return (
+<div>
     <form 
     onSubmit={handleSubmit(onSubmit)}
     name="from_item_path"
