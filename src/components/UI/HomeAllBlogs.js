@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 const HomeAllBlogs = ({allBlogs}) => {
-  const [limit, setLimit] = useState(4);
+  const [limit, setLimit] = useState(6);
   console.log(setLimit);
 
   const {Meta} = Card;
@@ -20,13 +20,13 @@ const HomeAllBlogs = ({allBlogs}) => {
             margin:"30px 0px",
         }}
         >
-    #TODAY HIGHLIGHT
+    #LATEST BLOGS
 </h1>
         <Row>
           {
           allBlogs?.slice(0, limit ? limit : allBlogs.length).map((blogs) =>(
               <Col 
-              xs={24} sm={24} md={12} lg={6} 
+              xs={24} sm={24} md={12} lg={8} 
               key={blogs?.id}
 
               >

@@ -1,9 +1,8 @@
-import { CalendarOutlined, CommentOutlined, EditOutlined, EllipsisOutlined, ProfileOutlined, SettingOutlined } from "@ant-design/icons";
-import { Col, Row, Spin } from "antd";
+import { CalendarOutlined, CommentOutlined, ProfileOutlined, } from "@ant-design/icons";
+import { Col, Row } from "antd";
 import Image from "next/image";
 import styles  from '@/styles/Home.module.css';
 import RootLayout from "@/components/Layouts/RootLayout";
-import { useGetBlogQuery } from "@/redux/api/apiSlice";
 
 
 const BlogDetailPage = ({blogs}) => {
@@ -33,7 +32,7 @@ const BlogDetailPage = ({blogs}) => {
                 
             <Col xs={24} sm={24} md={12} lg={12} >
                 <div style={{margin: "20px"}}>                    
-                   <h1>{blogs?.title}</h1>
+                   <h1>Title: {blogs?.title}</h1>
                 <div
                   style={{
                     height:"5px",
@@ -67,6 +66,10 @@ const BlogDetailPage = ({blogs}) => {
                     {blogs?.description}
                 </p>
 
+                <p style={{fontSize: "15px", fontWeight: "200", marginTop: "10px"}}>
+                    {blogs?.detaile}
+                </p>
+
                   <p
                     style={{
                         fontSize:"15px",
@@ -75,6 +78,16 @@ const BlogDetailPage = ({blogs}) => {
 
                     <span> Author: {blogs?.author}</span>
                   </p>
+
+                  <button 
+                  style={{backgroundColor: "black", 
+                  color: "white", 
+                  padding: "0.5em", 
+                  border: "none",
+                  marginTop: "20px"
+                  }}>
+                    SEE MORE
+                  </button>
                 </div>
             </Col>
 

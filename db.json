@@ -8,7 +8,8 @@
             "release_date": "June 10, 2023",
             "category": "Book",
             "comment_count": 100,
-            "image_url": "/images/book.jpg"
+            "image_url": "/images/book.jpg",
+            "detaile": "The best headlines are the ones that capture the pain points of your target personas and introduces a topic that will make their lives better. And it must be compelling. If your headline is not compelling, you'll lose up to 80% of your audience.A catchy title is the headline of a content article that contains elements to persuade readers to read it. Writing an effective headline can be an essential element of your content. A catchy title can bring a customer to your article by explaining what's in it or what value the reader can get from clicking on it.This introduction acts as the thesis of the content – what will be covered, in what order, and what the audience can expect to take away. Few visitors read content from start to finish. Laying out your thesis helps people to find the information they need quickly."
         },
         {
             "id": "2",
@@ -18,7 +19,8 @@
             "release_date": "June 12, 2023",
             "category": "Coffee",
             "comment_count": 10,
-            "image_url": "/images/coffee.jpg"
+            "image_url": "/images/coffee.jpg",
+            "detaile": "Cold brew coffee is perfect drink for hot summer days but why you should definitely sell it in your café? Here are my four reasons why every café should sell cold brew coffee throughout the year!The reason why most of us practice meditation is that it helps us to find inner peace, improves perception, helps brain to rest, helps us to stay in the present moment and most of all perfects our sense of contentment as a whole. There is plenty of research about the positive effects of mediation towards comprehensive well-being of people. Researches show that meditation helps people to concentrate on the present moment and prevents dilution of thoughts. Dilution of thoughts had negative effect on learning new and fulfilling tasks."
         },
         {
             "id": "3",
@@ -28,7 +30,8 @@
             "release_date": "June 15, 2023",
             "category": "News",
             "comment_count": 15,
-            "image_url": "/images/news.jpg"
+            "image_url": "/images/news.jpg",
+            "detaile": "A News section is a section on the website where you can display unlimited separate articles relating to your business, typically used to keep customers up-to-date. Each blog is a complete separate article, with its own unique page.Your News section is generally going to be more official, and your blog should have a more personal tone. While it is often expected to announce the author of a blog post, that isn't necessary for a News post. Additionally, while blogging should always allow discussion through comments, a News section usually doesn't."
         },
         {
             "id": "4",
@@ -38,7 +41,8 @@
             "release_date": "June 16, 2023",
             "category": "Stydy",
             "comment_count": 20,
-            "image_url": "/images/study.jpg"
+            "image_url": "/images/study.jpg",
+            "detaile": "How to Create a Student Blog: Top Blog Ideas, First Steps.Study blogs primarily aim to show students' life and be helpful to other students. If you don't feel like making your blog a place for useful information, that's alright. People also like watching other people's authentic experiences. You don't have to be a guidebook. Combine study hacks with your daily routine.Imagine you had a daily opportunity to have a chat with competent and knowledgeable people. During these meetings, they share their skills and know-how with you. In real life, it is unimaginable, but the Internet made it partly possible. Blogs are rated among the most comfortable and up-to-date sources of information from the experts in specific spheres.Deep work, productivity, and work-life (or study-life) balance look simple in theory but impossible in practice. Study blogs with hacks and practical examples are a perfect alternative to suffer bumps and bruises of personal experiences. Explore our list of best student blogs."
         },
 
         {
@@ -49,7 +53,8 @@
             "release_date": "June 16, 2023",
             "category": "Work",
             "comment_count": 20,
-            "image_url": "/images/work.jpg"
+            "image_url": "/images/work.jpg",
+            "detaile": "Work simple as obtaining a website and publishing original content on it. Tech-savvy bloggers can buy a domain name and build the website themselves. Those with less HTML knowledge can create an account with sites like WordPress that simplify the web design and publishing process.The answer to the question, 'What does a blog writer do? ' is that they conceptualise, pitch, research, write and post content on the internet. They may use search engine optimisation (SEO) tools so that search engines can locate their material easily.They post content on platforms such as company websites, WordPress and social media. Bloggers need to captivate their readers by providing an escape, highlighting a specific problem, or selling solutions. Blog writing is a common path for freelance writing careers"
         },
 
         {
@@ -60,7 +65,8 @@
             "release_date": "June 16, 2023",
             "category": "Written",
             "comment_count": 20,
-            "image_url": "/images/write.jpg"
+            "image_url": "/images/write.jpg",
+            "detaile": "The best headlines are the ones that capture the pain points of your target personas and introduces a topic that will make their lives better. And it must be compelling. If your headline is not compelling, you'll lose up to 80% of your audience.A catchy title is the headline of a content article that contains elements to persuade readers to read it. Writing an effective headline can be an essential element of your content. A catchy title can bring a customer to your article by explaining what's in it or what value the reader can get from clicking on it.This introduction acts as the thesis of the content – what will be covered, in what order, and what the audience can expect to take away. Few visitors read content from start to finish. Laying out your thesis helps people to find the information they need quickly."
         },
 
         {
@@ -71,7 +77,8 @@
             "release_date": "July 18, 2023",
             "category": "Healthy Food",
             "comment_count": 10,
-            "image_url": "/images/healthy-food.jpg"
+            "image_url": "/images/healthy-food.jpg",
+            "detaile": "If you've got interests and slightly more personality than a doorknob, you can write a blog. This may seem intimidating, and you may be thinking But you can, and we're here to show you how."
         },
 
         {
@@ -82,7 +89,8 @@
             "release_date": "June 12, 2023",
             "category": "Socal Media",
             "comment_count": 10,
-            "image_url": "/images/socal-media.jpg"
+            "image_url": "/images/socal-media.jpg",
+            "detaile": "The best headlines are the ones that capture the pain points of your target personas and introduces a topic that will make their lives better. And it must be compelling. If your headline is not compelling, you'll lose up to 80% of your audience.A catchy title is the headline of a content article that contains elements to persuade readers to read it. Writing an effective headline can be an essential element of your content. A catchy title can bring a customer to your article by explaining what's in it or what value the reader can get from clicking on it.This introduction acts as the thesis of the content – what will be covered, in what order, and what the audience can expect to take away. Few visitors read content from start to finish. Laying out your thesis helps people to find the information they need quickly."
         },
 
         {
@@ -93,7 +101,8 @@
             "release_date": "June 12, 2023",
             "category": "Skin care",
             "comment_count": 10,
-            "image_url": "/images/skin-care.jpg"
+            "image_url": "/images/skin-care.jpg",
+            "detaile": "If you have an interest in fashion and beauty, then creating your own beauty blog could be a great way to turn your passion into revenue. Beauty blogging is a busy niche. However, with the right type of website, hard work, and your unique spin on beauty tips and tricks, there is the potential to make it big. So how do you start a beauty.Here are other reasons why copywriting is important, especially in the skincare industry Helps to improve  your brand awareness.Good copywriting speaks to your target audience in their language.Improves the relationship between you and your customers.Skin care is a range of practices that support skin integrity, enhance its appearance, and relieve skin conditions. They can include nutrition, avoidance of excessive sun exposure, and appropriate use of emollients.Increases organic traffic to your site"
         }
     ]
 }

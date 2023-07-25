@@ -2,7 +2,7 @@ import {  Dropdown, Layout, Menu, Space,} from 'antd';
 import Image from 'next/image';
 import logo from '@/assets/images/logo.png';
 import Link from 'next/link';
-import { DeploymentUnitOutlined,  DownOutlined,  FacebookFilled, GoogleSquareFilled,  LinkedinFilled, LoginOutlined, MobileOutlined, PoweroffOutlined,  RobotOutlined,   TwitterSquareFilled, UserOutlined, } from '@ant-design/icons';
+import { DashboardOutlined, DeploymentUnitOutlined,  DownOutlined,  FacebookFilled, GoogleSquareFilled,  LinkedinFilled, LoginOutlined, MobileOutlined, PoweroffOutlined,  RobotOutlined,   TwitterSquareFilled, UserOutlined, } from '@ant-design/icons';
 import styles  from '@/styles/Home.module.css';
 const { Header, Content, Footer } = Layout;
 
@@ -54,18 +54,18 @@ const RootLayout = ({ children }) => {
                }}
                 >
                    <DeploymentUnitOutlined  style={{margin: "5px"}}/>
-                   All Blogs 
+                   Blogs 
                 </items>
             </Link>    
 
-            <Link href="/about">
+            {/* <Link href="/about"> 
                 <items>
                   <RobotOutlined style={{margin: "5px"}}/>
                  About Us
                 </items>
-            </Link>    
+            </Link>    */}
 
-            <Link href="/contact">
+         {/*   <Link href="/contact">
                 <items
                style={{
                    margin: "0px 30px"
@@ -74,8 +74,17 @@ const RootLayout = ({ children }) => {
                  <MobileOutlined style={{margin: "5px"}}/>
                  Contact Us
                 </items>
-            </Link>    
-
+            </Link>  */}  
+            
+            <Link href="/dashboard"> 
+               <items
+                  style={{
+                 margin: "0px 30px"
+                 }}>              
+                <DashboardOutlined style={{margin: "5px"}}/>
+                Dashboard
+               </items>
+           </Link>   
 
             <Link href="/login">
                 <items>
@@ -96,9 +105,7 @@ const RootLayout = ({ children }) => {
             </Link> 
 
 
-  
-
-                <Dropdown
+            <Dropdown
                   menu={{
                     items,
                   }}
@@ -111,15 +118,8 @@ const RootLayout = ({ children }) => {
               </a>
                </Dropdown>
 
-            {/* <Link href="/dashboard"> 
-               <items
-                  style={{
-                 margin: "0px 30px"
-                 }}>              
-                <DashboardOutlined style={{margin: "5px"}}/>
-                Dashboard
-               </items>
-           </Link>    */}
+
+
         </Menu>
       </Header>
       <Content

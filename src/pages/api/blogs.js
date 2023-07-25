@@ -1,4 +1,4 @@
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 // const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.zoj9s.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const uri = "mongodb+srv://brainzetWebsite:ebjA9y0vG5pxwqGi@cluster0.zoj9s.mongodb.net/?retryWrites=true&w=majority";
 console.log('database uri',uri);
@@ -28,6 +28,15 @@ async function run(req, res) {
         const result = await blogsCollection.insertOne(blogs);
         res.json(result);
     }
+
+    //single post 
+    // if (req.method === 'GET'){
+      // const blogId = req.params.blogId;
+      // const query = { _id: ObjectId(blogId)};
+      // const blog = await blogsCollection.findOne(query);
+      // res.json(blog);
+    // }
+
 
   } finally {
     // await client.close();
