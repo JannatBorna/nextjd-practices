@@ -35,15 +35,15 @@ return (
            width: "50%",
            margin: "50px auto",
            }}>
-        <input {...register("id")} placeholder="ID" style={{marginBottom: "10px",  width: "100%"}} />
-        <input {...register("title")} placeholder="Title" style={{marginBottom: "10px",  width: "100%"}}/>
-        <input {...register("description")} placeholder="Description"  style={{marginBottom: "10px",  width: "100%"}}/>
-        <input {...register("author")} placeholder="Author" style={{marginBottom: "10px",  width: "100%"}}/>
-        <input {...register("release_date")} type="date" placeholder="Release Date" style={{marginBottom: "10px",  width: "100%"}}/>
-        <input {...register("category")} placeholder="Category" style={{marginBottom: "10px",  width: "100%"}}/>
-        <input {...register("comment_count")} type="number" placeholder="Number of Comment" style={{marginBottom: "10px",  width: "100%"}}/>
-        <input {...register("image_url")} placeholder="Image Url"  style={{marginBottom: "10px",  width: "100%"}}/>
-        <input type="submit" value="Upload Blog" style={{margin: "10px 0px", width: "100%",  width: "100%"}}/>
+        <input {...register("id")} placeholder="ID" style={{marginBottom: "10px",  width: "100%", height: "5vh"}} />
+        <input {...register("title")} placeholder="Title" style={{marginBottom: "10px",  width: "100%", height: "5vh"}}/>
+        <input {...register("description")} placeholder="Description"  style={{marginBottom: "10px",  width: "100%", height: "5vh"}}/>
+        <input {...register("author")} placeholder="Author" style={{marginBottom: "10px",  width: "100%", height: "5vh"}}/>
+        <input {...register("release_date")} type="date" placeholder="Release Date" style={{marginBottom: "10px",  width: "100%", height: "5vh"}}/>
+        <input {...register("category")} placeholder="Category" style={{marginBottom: "10px",  width: "100%", height: "5vh"}}/>
+        <input {...register("comment_count")} type="number" placeholder="Number of Comment" style={{marginBottom: "10px",  width: "100%", height: "5vh"}}/>
+        <input {...register("image_url")} placeholder="Image Url"  style={{marginBottom: "10px",  width: "100%", height: "5vh"}}/>
+        <input type="submit" value="Upload Blog" style={{margin: "20px",width: "100%",  width: "90%", backgroundColor:"#000000", color: "white", height: "5vh" }}/>
     </form>
         </div>
     );
