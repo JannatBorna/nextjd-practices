@@ -3,7 +3,7 @@ import { Breadcrumb, Col, Layout, Menu, Row, theme } from 'antd';
 import Image from 'next/image';
 import logo from '@/assets/images/logo.png';
 import Link from 'next/link';
-import { FacebookFilled, FacebookOutlined, GoogleSquareFilled, HomeOutlined, LinkedinFilled, MobileOutlined, ProfileOutlined, TwitterSquareFilled, UserOutlined } from '@ant-design/icons';
+import { DeploymentUnitOutlined, FacebookFilled, GoogleSquareFilled, HomeOutlined, LinkedinFilled, LoginOutlined, MobileOutlined, PoweroffOutlined, ProfileOutlined, SecurityScanOutlined, TeamOutlined, TwitterSquareFilled, UserOutlined, UsergroupAddOutlined } from '@ant-design/icons';
 import styles  from '@/styles/Home.module.css';
 const { Header, Content, Footer } = Layout;
 
@@ -35,19 +35,10 @@ const RootLayout = ({ children }) => {
           className={styles.manu_item}
         >
 
-            <Link href="/">
-                <items
-                  style={{
-                  margin: "0px 30px"
-                  }}>
-                   <HomeOutlined />
-                   Home 
-                </items>
-            </Link>    
 
             <Link href="/allBlogs">
                 <items>
-                   <ProfileOutlined  />
+                   <DeploymentUnitOutlined  style={{margin: "5px"}}/>
                    All Blogs 
                 </items>
             </Link>    
@@ -58,17 +49,57 @@ const RootLayout = ({ children }) => {
                     margin: "0px 30px"
                 }}
                 >
-                 <UserOutlined /> 
+                 <UserOutlined style={{margin: "5px"}}/> 
                  About Us
                 </items>
             </Link>    
 
             <Link href="/contact">
                 <items>
-                 <MobileOutlined />
+                 <MobileOutlined style={{margin: "5px"}}/>
                  Contact Us
                 </items>
             </Link>    
+
+
+            <Link href="">
+                <items
+                   style={{
+                   margin: "0px 30px"
+                  }}>
+                   <LoginOutlined style={{margin: "5px"}}/>
+                  Login
+                </items>
+            </Link>  
+
+              <Link href="">
+                <items
+                  style={{
+                  margin: "0px 30px",
+                   color: "red"
+                  }}>
+                   <PoweroffOutlined style={{margin: "5px"}}/>
+                  Logout
+                </items>
+            </Link>  
+
+            <Link href="">
+                <items>
+                    <TeamOutlined style={{margin: "5px"}}/>
+                  Profile
+                </items>
+            </Link>  
+              
+
+            {/* <Link href="/dashboard"> 
+               <items
+                  style={{
+                 margin: "0px 30px"
+                 }}>              
+                <DashboardOutlined style={{margin: "5px"}}/>
+                Dashboard
+               </items>
+           </Link>    */}
         </Menu>
       </Header>
       <Content
