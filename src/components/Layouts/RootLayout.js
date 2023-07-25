@@ -1,14 +1,25 @@
-import React from 'react';
-import { Breadcrumb, Col, Layout, Menu, Row, theme } from 'antd';
+import {  Dropdown, Layout, Menu, Space,} from 'antd';
 import Image from 'next/image';
 import logo from '@/assets/images/logo.png';
 import Link from 'next/link';
-import { DeploymentUnitOutlined, FacebookFilled, GoogleSquareFilled, HomeOutlined, LinkedinFilled, LoginOutlined, MobileOutlined, PoweroffOutlined, ProfileOutlined, SecurityScanOutlined, TeamOutlined, TwitterSquareFilled, UserOutlined, UsergroupAddOutlined } from '@ant-design/icons';
+import { DeploymentUnitOutlined,  DownOutlined,  FacebookFilled, GoogleSquareFilled,  LinkedinFilled, LoginOutlined, MobileOutlined, PoweroffOutlined,  RobotOutlined,   TwitterSquareFilled, UserOutlined, } from '@ant-design/icons';
 import styles  from '@/styles/Home.module.css';
 const { Header, Content, Footer } = Layout;
 
+
 const RootLayout = ({ children }) => {
-    
+
+  const items = [
+  {
+    label: <a href="/createBlog">Uploaded Blog</a>,
+    key: '0',
+  },
+  {
+    label: <a href="/review">Review</a>,
+    key: '1',
+  },
+];
+
   return (
     <Layout>
       <Header
@@ -37,36 +48,37 @@ const RootLayout = ({ children }) => {
 
 
             <Link href="/allBlogs">
-                <items>
+                <items
+                  style={{
+                  margin: "0px 30px"
+               }}
+                >
                    <DeploymentUnitOutlined  style={{margin: "5px"}}/>
                    All Blogs 
                 </items>
             </Link>    
 
             <Link href="/about">
-                <items
-                style={{
-                    margin: "0px 30px"
-                }}
-                >
-                 <UserOutlined style={{margin: "5px"}}/> 
+                <items>
+                  <RobotOutlined style={{margin: "5px"}}/>
                  About Us
                 </items>
             </Link>    
 
             <Link href="/contact">
-                <items>
+                <items
+               style={{
+                   margin: "0px 30px"
+               }}                
+                >
                  <MobileOutlined style={{margin: "5px"}}/>
                  Contact Us
                 </items>
             </Link>    
 
 
-            <Link href="">
-                <items
-                   style={{
-                   margin: "0px 30px"
-                  }}>
+            <Link href="/login">
+                <items>
                    <LoginOutlined style={{margin: "5px"}}/>
                   Login
                 </items>
@@ -75,21 +87,29 @@ const RootLayout = ({ children }) => {
               <Link href="">
                 <items
                   style={{
-                  margin: "0px 30px",
+                    margin: "0px 30px",
                    color: "red"
                   }}>
                    <PoweroffOutlined style={{margin: "5px"}}/>
                   Logout
                 </items>
-            </Link>  
+            </Link> 
 
-            <Link href="">
-                <items>
-                    <TeamOutlined style={{margin: "5px"}}/>
-                  Profile
-                </items>
-            </Link>  
-              
+
+  
+
+                <Dropdown
+                  menu={{
+                    items,
+                  }}
+                  trigger={['click']}
+                >
+              <a onClick={(e) => e.preventDefault()}>
+              <Space>
+              <UserOutlined />
+              </Space>
+              </a>
+               </Dropdown>
 
             {/* <Link href="/dashboard"> 
                <items
