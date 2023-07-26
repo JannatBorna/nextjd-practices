@@ -1,13 +1,20 @@
-import {  Dropdown, Layout, Menu, Space,} from 'antd';
+import { Layout, Menu } from 'antd';
 import Image from 'next/image';
 import logo from '@/assets/images/logo.png';
 import Link from 'next/link';
 import { DashboardOutlined, DeploymentUnitOutlined,  DownOutlined,  FacebookFilled, GoogleSquareFilled,  LinkedinFilled, LoginOutlined, MobileOutlined, PoweroffOutlined,  RobotOutlined,   TwitterSquareFilled, UserOutlined, } from '@ant-design/icons';
 import styles  from '@/styles/Home.module.css';
+import { useSession, signOut } from "next-auth/react"
+// import { useAuthState } from 'react-firebase-hooks/auth';
 const { Header, Content, Footer } = Layout;
 
 
+
 const RootLayout = ({ children }) => {
+
+   const { data: session } = useSession(); // github
+     // firebase hooks
+  //  const [user, loading, error] = useAuthState(auth);
 
   const items = [
   {
@@ -60,23 +67,34 @@ const RootLayout = ({ children }) => {
                 Dashboard
               </items>
            </Link>   
-
+           
+         {
+            session?.user?.email?(
+               <items style={{ margin: "0px 30px" }}>
+                <button 
+                onClick={() => signOut()}
+                style={{
+                  margin: "5px",
+                  background:"#1f1f1f", 
+                  border:"none", 
+                  color: "red",
+                  fontSize: "20px",
+                  cursor: "pointer"
+                  }}>
+                  <PoweroffOutlined  style={{margin: "5px"}}/>
+                  Logout
+                  </button>
+               </items>
+        ) :
             <Link href="/login"  className={styles.manu}>
               <items style={{padding: "10px"}}>
                 <LoginOutlined style={{margin: "5px"}}/>
                 Login
               </items>
             </Link>  
+        }
 
-              <Link href="">
-                <items style={{ margin: "0px 30px", color: "red" }}>
-                  <PoweroffOutlined style={{margin: "5px"}}/>
-                  Logout
-                </items>
-            </Link> 
-
-{/*  
-            <Dropdown
+            {/* <Dropdown 
                   menu={{
                     items,
                   }}
@@ -84,11 +102,10 @@ const RootLayout = ({ children }) => {
                 >
               <a onClick={(e) => e.preventDefault()}>
               <Space>
-              <UserOutlined />
+              <UserOutlined /> 
               </Space>
               </a>
-               </Dropdown>
-*/}
+               </Dropdown>*/}
 
 
         </Menu>

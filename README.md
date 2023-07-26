@@ -24,8 +24,8 @@
 
 ✅ Your project must have a custom not found page.(আপনার প্রকল্পের একটি কাস্টম পাওয়া যায়নি পৃষ্ঠা থাকতে হবে.)
 
-❌ You must implement NextAuth's Google & GitHub authentication system or Firebase's email password authentication system.(আপনাকে অবশ্যই NextAuth-এর Google এবং GitHub প্রমাণীকরণ সিস্টেম বা Firebase-এর ইমেল পাসওয়ার্ড প্রমাণীকরণ সিস্টেম প্রয়োগ করতে হবে।)
+✅ You must implement NextAuth's Google & GitHub authentication system or Firebase's email password authentication system.(আপনাকে অবশ্যই NextAuth-এর Google এবং GitHub প্রমাণীকরণ সিস্টেম বা Firebase-এর ইমেল পাসওয়ার্ড প্রমাণীকরণ সিস্টেম প্রয়োগ করতে হবে।)
 
-❌ Your Dashboard route must be private route or protected route only logged in user can see or visit dashboard route.(আপনার ড্যাশবোর্ড রুটটি অবশ্যই ব্যক্তিগত রুট বা সুরক্ষিত রুট হতে হবে শুধুমাত্র লগ ইন করা ব্যবহারকারী ড্যাশবোর্ড রুট দেখতে বা দেখতে পারবেন।)
+✅ Your Dashboard route must be private route or protected route only logged in user can see or visit dashboard route.(আপনার ড্যাশবোর্ড রুটটি অবশ্যই ব্যক্তিগত রুট বা সুরক্ষিত রুট হতে হবে শুধুমাত্র লগ ইন করা ব্যবহারকারী ড্যাশবোর্ড রুট দেখতে বা দেখতে পারবেন।)
 
 ✅ If you do these things, your Next JS basic practice is done✅
