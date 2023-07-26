@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import {
-    BankOutlined,
+  BankOutlined,
   DesktopOutlined,
-  FileOutlined,
-  UserOutlined,
+  FormOutlined,
+  GoldOutlined,
+  LogoutOutlined,
+ 
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import Link from 'next/link';
 const { Header, Content, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -13,49 +16,59 @@ function getItem(label, key, icon, children) {
     icon,
     children,
     label,
+   
+    
   };
 }
-const items = [
-  getItem('Home', '1', <BankOutlined />),
-  getItem('Blogs', '2', <DesktopOutlined />),
-  getItem('User', 'sub1', <UserOutlined />, [
-    getItem('Review', '3'),
-    getItem('Cart', '4'),
-  ]),
-  getItem('Create Blog', '5', <FileOutlined />),
-];
+
+// const items = [
+  // getItem('Home', '1',  <PieChartOutlined />),
+  // getItem('Blog', '2', <DesktopOutlined />),
+  // getItem('Upload Blog', '3', <TeamOutlined />),
+  // getItem('Review', '4', <FileOutlined />),
+  // getItem('Logout', '5', <LogoutOutlined />),
+// ];
+
+
+
+
 
 
 
 
 const DashboardLayout = ({children}) => {
   const [collapsed, setCollapsed] = useState(false);
-//   const {
-    // token: { colorBgContainer },
-//   } = theme.useToken();
   return (
     <Layout
       style={{
         minHeight: '100vh',
       }}
     >
-      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}
+        style={{
+padding: '10px'
+  }}
+      >
         <div className="demo-logo-vertical" />
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" 
+          items={[
+            { label: <Link href="/"><BankOutlined /> <span style={{ marginLeft: '5px'}}>Home</span></Link>},
+            { label: <Link href="/dashboardBlog"><DesktopOutlined/> <span style={{ marginLeft: '5px'}}>Blog</span></Link>},
+            { label: <Link href="/feedbacks"><FormOutlined  /> <span style={{ marginLeft: '5px'}}>Feedbacks</span></Link>},
+            { label: <Link href="/createBlog"><GoldOutlined /> <span style={{ marginLeft: '5px'}}>Upload Blogs</span></Link>},
+            { label: "Logout", icon: <LogoutOutlined />, danger: true},
+          ]}
+            
+         ></Menu>
       </Sider>
       <Layout>
         <Header
           style={{
             padding: 0,
-            // background: colorBgContainer,
           }}
         />
-        <Content
-          style={{
-            margin: '0 16px',
-          }}
-        >
-          <Breadcrumb
+        <Content style={{margin: '0 16px',}}>
+         <Breadcrumb 
             style={{
               margin: '16px 0',
             }}
@@ -68,7 +81,6 @@ const DashboardLayout = ({children}) => {
               padding: 24,
               minHeight: 560,
               background: "#fff"
-            //   background: colorBgContainer,
             }}
           >
             {children}
@@ -78,4 +90,6 @@ const DashboardLayout = ({children}) => {
     </Layout>
   );
 };
+
+
 export default DashboardLayout;

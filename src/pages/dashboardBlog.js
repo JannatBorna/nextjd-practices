@@ -1,19 +1,18 @@
 // import Dashboard from '@/components/Layouts/Dashboard';
 import DashboardLayout from '@/components/Layouts/DashboardLayout';
-// import DashboardLayout from '@/components/Layouts/DashboardLayout';
 import React from 'react';
 
-const DashboardPage = () => {
+const DashboardBlog = () => {
     return (
         <div>
-            <h1 style={{fontSize:"30px", textAlign: "center"}}>Welcome to Dashboard Home page</h1>
+            <h1>Dashboard Blog</h1>
         </div>
     );
 };
 
-export default DashboardPage;
+export default DashboardBlog;
 
-DashboardPage.getLayout = function getLayout(page){
+DashboardBlog.getLayout = function getLayout(page){
     return(
         <DashboardLayout>
           {page}

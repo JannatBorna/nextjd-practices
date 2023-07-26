@@ -1,4 +1,5 @@
-import RootLayout from "@/components/Layouts/RootLayout";
+import DashboardLayout from "@/components/Layouts/DashboardLayout";
+// import RootLayout from "@/components/Layouts/RootLayout";
 import { useForm } from "react-hook-form"
 import swal from "sweetalert";
 // import swal from "sweetalert";
@@ -53,8 +54,8 @@ export default CreateBlogPage;
 
 CreateBlogPage.getLayout = function getLayout(page){
     return(
-        <RootLayout > 
+        <DashboardLayout>
           {page}
-        </RootLayout>
+        </DashboardLayout>
     )
 }
