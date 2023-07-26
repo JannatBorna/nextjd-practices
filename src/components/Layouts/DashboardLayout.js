@@ -7,7 +7,7 @@ import {
   LogoutOutlined,
  
 } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Breadcrumb, Layout, Menu } from 'antd';
 import Link from 'next/link';
 const { Header, Content, Sider } = Layout;
 function getItem(label, key, icon, children) {
