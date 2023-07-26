@@ -1,16 +1,33 @@
-import DashboardLayout from "@/components/Layouts/DashboardLayout";
+import React from 'react';
+import AddFeedbacks from './addFeedback';
+import DashboardLayout from '@/components/Layouts/DashboardLayout';
+import { Col, Row } from 'antd';
 
-const Feedbacks = () => {
-    return (
-        <div>
-            <h1>Feedbacks page</h1>
+const FeedbackPage = () => {
+return (
+    <div>
+    <Row>
+       <Col span={12} style={{borderRight: "1px solid black"}}>
+            <div>
+                <h1>Feedbacks page</h1>
+            </div>
+      </Col>
+      <Col span={12}>
+            <div>
+               <AddFeedbacks />
+           </div>
+      </Col>
+    </Row>
+          
+          
+          
         </div>
     );
 };
 
-export default Feedbacks;
+export default FeedbackPage;
 
-Feedbacks.getLayout = function getLayout(page){
+FeedbackPage.getLayout = function getLayout(page){
     return(
         <DashboardLayout>
           {page}
