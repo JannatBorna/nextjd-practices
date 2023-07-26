@@ -16,25 +16,8 @@ function getItem(label, key, icon, children) {
     icon,
     children,
     label,
-   
-    
   };
 }
-
-// const items = [
-  // getItem('Home', '1',  <PieChartOutlined />),
-  // getItem('Blog', '2', <DesktopOutlined />),
-  // getItem('Upload Blog', '3', <TeamOutlined />),
-  // getItem('Review', '4', <FileOutlined />),
-  // getItem('Logout', '5', <LogoutOutlined />),
-// ];
-
-
-
-
-
-
-
 
 const DashboardLayout = ({children}) => {
   const [collapsed, setCollapsed] = useState(false);
