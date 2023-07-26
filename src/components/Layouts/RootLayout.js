@@ -39,67 +39,38 @@ const RootLayout = ({ children }) => {
             />
         </Link>
         </div>
-        <Menu
-         style={{backgroundColor: "#1f1f1f"}}
-        //   theme="dark"
-          mode="vertical"
-          className={styles.manu_item}
-        >
-
-
-            <Link href="/allBlogs">
-                <items
-                  style={{
-                  margin: "0px 30px"
-               }}
-                >
+        <Menu style={{backgroundColor: "#1f1f1f"}}  mode="vertical" className={styles.manu_item} >
+            <Link href="/allBlogs" className={styles.manu}>
+                <items style={{ margin: "0px 30px", padding: "5px"  }}>
                    <DeploymentUnitOutlined  style={{margin: "5px"}}/>
                    Blogs 
                 </items>
             </Link>    
 
-            {/* <Link href="/about"> 
-                <items>
-                  <RobotOutlined style={{margin: "5px"}}/>
-                 About Us
-                </items>
-            </Link>    */}
+            <Link href="/feedbacks"  className={styles.manu}> 
+              <items style={{padding: "10px"}}>
+                <RobotOutlined style={{margin: "5px"}}/>
+                Feedbacks
+              </items>
+            </Link>  
 
-         {/*   <Link href="/contact">
-                <items
-               style={{
-                   margin: "0px 30px"
-               }}                
-                >
-                 <MobileOutlined style={{margin: "5px"}}/>
-                 Contact Us
-                </items>
-            </Link>  */}  
-            
-            <Link href="/dashboard"> 
-               <items
-                  style={{
-                 margin: "0px 30px"
-                 }}>              
+            <Link href="/dashboard" className={styles.manu}> 
+              <items style={{ margin: "0px 30px", padding: "10px" }}>              
                 <DashboardOutlined style={{margin: "5px"}}/>
                 Dashboard
-               </items>
+              </items>
            </Link>   
 
-            <Link href="/login">
-                <items>
-                   <LoginOutlined style={{margin: "5px"}}/>
-                  Login
-                </items>
+            <Link href="/login"  className={styles.manu}>
+              <items style={{padding: "10px"}}>
+                <LoginOutlined style={{margin: "5px"}}/>
+                Login
+              </items>
             </Link>  
 
               <Link href="">
-                <items
-                  style={{
-                    margin: "0px 30px",
-                   color: "red"
-                  }}>
-                   <PoweroffOutlined style={{margin: "5px"}}/>
+                <items style={{ margin: "0px 30px", color: "red" }}>
+                  <PoweroffOutlined style={{margin: "5px"}}/>
                   Logout
                 </items>
             </Link> 

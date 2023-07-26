@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import swal from 'sweetalert';
 
 
-const AddFeedback = () => {
+const AddReviews = () => {
     // const { user } = useAuth();
     const { register } = useForm();
     const nameRef = useRef();
@@ -45,7 +45,7 @@ const AddFeedback = () => {
        width: "50%",
        margin: "50px auto",
        }}>  
-        <div style={{fontSize: "30px", color: "red" }}>Add Feedback</div>       
+        <div style={{fontSize: "20px", color: "red" }}>Add Reviews</div>       
         <form 
             onSubmit={handleUser}
             name="from_item_path"
@@ -57,12 +57,12 @@ const AddFeedback = () => {
             <input {...register("rating")} type="number" placeholder="Rating Number" ref={ratingRef} style={{marginBottom: "10px",  width: "100%", height: "5vh"}}/>
             <input type="submit" value="Submit" style={{marginBottom: "10px",  width: "100%", height: "5vh"}}/>
         </form>
-            </div>
+        </div>
              
     );
 };
 
-export default AddFeedback;   
+export default AddReviews;   
 
 
            

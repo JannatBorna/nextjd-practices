@@ -37,7 +37,7 @@ padding: '10px'
           items={[
             { label: <Link href="/"><BankOutlined /> <span style={{ marginLeft: '5px'}}>Home</span></Link>},
             { label: <Link href="/dashboard/dashboardBlog"><DesktopOutlined/> <span style={{ marginLeft: '5px'}}>Blog</span></Link>},
-            { label: <Link href="/dashboard/feedbacks"><FormOutlined  /> <span style={{ marginLeft: '5px'}}>Feedbacks</span></Link>},
+            { label: <Link href="/dashboard/reviews"><FormOutlined  /> <span style={{ marginLeft: '5px'}}>Feedbacks</span></Link>},
             { label: <Link href="/dashboard/createBlog"><GoldOutlined /> <span style={{ marginLeft: '5px'}}>Upload Blogs</span></Link>},
             { label: "Logout", icon: <LogoutOutlined />, danger: true},
           ]}

@@ -16,9 +16,9 @@
 
 ✅ There will be another option on the navbar called Dashboard where clicking will take you to the dashboard route and there will be another type of layout.(ড্যাশবোর্ড নামক ন্যাভবারে আরেকটি বিকল্প থাকবে যেখানে ক্লিক করলে আপনাকে ড্যাশবোর্ড রুটে নিয়ে যাবে এবং সেখানে অন্য ধরনের লেআউট থাকবে।)
 
-❌ There will be no header footer on Dashboard, there will be a sidebar on the right side and content on the left side.(ড্যাশবোর্ডে কোন হেডার ফুটার থাকবে না, ডান পাশে সাইডবার এবং বাম পাশে কন্টেন্ট থাকবে।)
+✅ There will be no header footer on Dashboard, there will be a sidebar on the right side and content on the left side.(ড্যাশবোর্ডে কোন হেডার ফুটার থাকবে না, ডান পাশে সাইডবার এবং বাম পাশে কন্টেন্ট থাকবে।)
 
-❌ There will be three options in the side bar named Home, Blogs, Feedbacks. Clicking on Home will take you to Home Route. And if you click on Blogs, the blogs will show on the left side. Similarly, if you click on Feedbacks, the reviews will be shown on the left side.(পাশের বারে Home, Blogs, Feedbacks নামে তিনটি অপশন থাকবে। হোম এ ক্লিক করলে আপনাকে হোম রুটে নিয়ে যাবে। আর ব্লগে ক্লিক করলে বাম পাশে ব্লগগুলো দেখাবে। একইভাবে, আপনি যদি Feedbacks এ ক্লিক করেন, তাহলে রিভিউগুলো বাম পাশে দেখা যাবে।)
+✅ There will be three options in the side bar named Home, Blogs, Feedbacks. Clicking on Home will take you to Home Route. And if you click on Blogs, the blogs will show on the left side. Similarly, if you click on Feedbacks, the reviews will be shown on the left side.(পাশের বারে Home, Blogs, Feedbacks নামে তিনটি অপশন থাকবে। হোম এ ক্লিক করলে আপনাকে হোম রুটে নিয়ে যাবে। আর ব্লগে ক্লিক করলে বাম পাশে ব্লগগুলো দেখাবে। একইভাবে, আপনি যদি Feedbacks এ ক্লিক করেন, তাহলে রিভিউগুলো বাম পাশে দেখা যাবে।)
 
 ❌ SSG should be done for showing blogs on home page and details of single blog on dynamic page. And in the case of reviews, SSR should be done.(হোম পেজে ব্লগ এবং ডায়নামিক পেজে একক ব্লগের বিশদ বিবরণ দেখানোর জন্য SSG করা উচিত। আর রিভিউ এর ক্ষেত্রে SSR করতে হবে।)
 
