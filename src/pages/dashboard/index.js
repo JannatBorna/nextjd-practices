@@ -1,25 +1,9 @@
-import RootLayout from '@/components/Layouts/RootLayout';
-import HomeAllBlogs from '@/components/UI/HomeAllBlogs';
-// import Banner from '@/components/UI/Banner';
 import Head from 'next/head';
 import { useGetBlogsQuery } from '@/redux/api/apiSlice';
-import { Space, Spin } from 'antd';
-import dynamic from 'next/dynamic';
+import DashboardLayout from '@/components/Layouts/DashboardLayout';
 
 
-const HomePage = ({allBlogs}) => {
-const DynamicBanner = dynamic(() => import('@/components/UI/Banner'),{
-  loading: () => <Space size="middle"
-                  style={{
-                  marginLeft: "50em",
-                  marginTop: "15%",
-                }}>
-                  <Spin size="large" />
-                </Space>,
-                
-                
-  ssr: false,
-})
+const DashboardHomePage = () => {
 
 // redux
 const {data, isLoading, isError, error} = useGetBlogsQuery()
@@ -31,7 +15,7 @@ console.log(error)
   return (
     <>
       <Head>
-        <title>Blogs Portal</title>
+        <title>Dashboard Blogs Portal</title>
         <meta
           name="description"
           content="This is blog portal made by next-js"
@@ -39,21 +23,18 @@ console.log(error)
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-       <DynamicBanner />
-        {/* <HomeAllBlogs allBlogs={allBlogs}/> */}  {/* nextjs */}
-        {/* <HomeAllBlogs allBlogs={data}/>*/} {/* redux */}
-        <HomeAllBlogs allBlogs={allBlogs} /> {/* mongodb */}
+      <h1 style={{fontSize:"30px", textAlign: "center", marginTop: '60px'}}>Welcome to Dashboard Home page</h1>
     </>
   );
 };
 
-export default HomePage;
+export default DashboardHomePage;
 
-HomePage.getLayout = function getLayout(page){
+DashboardHomePage.getLayout = function getLayout(page){
   return (
-    <RootLayout>
+    <DashboardLayout>
       {page}
-    </RootLayout>
+    </DashboardLayout>
   )
 }
 
