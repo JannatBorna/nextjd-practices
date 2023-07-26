@@ -4,9 +4,10 @@ import { Card, Col, Row } from "antd";
 import Image from "next/image";
 import styles  from '@/styles/Home.module.css';
 import Link from "next/link";
+import DashboardLayout from '@/components/Layouts/DashboardLayout';
 
 
-const AllBlogsPage = ({allBlogs}) => {
+const DashboardBlogs = ({dashboardBlog}) => {
     const {Meta} = Card;
     return (
       <>
@@ -21,7 +22,7 @@ const AllBlogsPage = ({allBlogs}) => {
 </h1>
         <Row>
           {
-          allBlogs?.map((blogs) =>(
+          dashboardBlog?.map((blogs) =>(
               <Col 
               xs={24} sm={24} md={12} lg={6} 
               key={blogs?.id}
@@ -102,13 +103,13 @@ const AllBlogsPage = ({allBlogs}) => {
     );
 };
 
-export default AllBlogsPage;
+export default DashboardBlogs;
 
-AllBlogsPage.getLayout = function getLayout (page){
+DashboardBlogs.getLayout = function getLayout (page){
     return(
-        <RootLayout>
+        <DashboardLayout>
             {page}
-        </RootLayout>
+        </DashboardLayout>
     )
 }
 
@@ -121,8 +122,7 @@ export const getServerSideProps = async () => {
   return {
     props:{
 
-      // allBlogs: data, // nextjs data fetching
-      allBlogs: data.data,
+      dashboardBlog: data.data, // dashboardBlog holo route name
     },
   };
 };

@@ -36,9 +36,9 @@ padding: '10px'
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" 
           items={[
             { label: <Link href="/"><BankOutlined /> <span style={{ marginLeft: '5px'}}>Home</span></Link>},
-            { label: <Link href="/dashboardBlog"><DesktopOutlined/> <span style={{ marginLeft: '5px'}}>Blog</span></Link>},
-            { label: <Link href="/feedbacks"><FormOutlined  /> <span style={{ marginLeft: '5px'}}>Feedbacks</span></Link>},
-            { label: <Link href="/createBlog"><GoldOutlined /> <span style={{ marginLeft: '5px'}}>Upload Blogs</span></Link>},
+            { label: <Link href="/dashboard/dashboardBlog"><DesktopOutlined/> <span style={{ marginLeft: '5px'}}>Blog</span></Link>},
+            { label: <Link href="/dashboard/feedbacks"><FormOutlined  /> <span style={{ marginLeft: '5px'}}>Feedbacks</span></Link>},
+            { label: <Link href="/dashboard/createBlog"><GoldOutlined /> <span style={{ marginLeft: '5px'}}>Upload Blogs</span></Link>},
             { label: "Logout", icon: <LogoutOutlined />, danger: true},
           ]}
             

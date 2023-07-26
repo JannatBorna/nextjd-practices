@@ -3,14 +3,14 @@ import { useGetBlogsQuery } from '@/redux/api/apiSlice';
 import DashboardLayout from '@/components/Layouts/DashboardLayout';
 
 
-const DashboardHomePage = () => {
+const DashboardHomePage = ({blogs}) => {
 
 // redux
-const {data, isLoading, isError, error} = useGetBlogsQuery()
-console.log(data)
-console.log(isLoading)
-console.log(isError)
-console.log(error)
+// const {data, isLoading, isError, error} = useGetBlogsQuery()
+// console.log(data)
+// console.log(isLoading)
+// console.log(isError)
+// console.log(error)
 
   return (
     <>
@@ -49,7 +49,7 @@ export const getServerSideProps = async () => {
     props:{
 
       // allBlogs: data, // nextjs data fetching and redux data fetching
-      allBlogs: data.data, // mongodb data fetching
+      dashboardBlog: data.data, // mongodb data fetching
     },
   };
 };
