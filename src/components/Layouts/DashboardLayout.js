@@ -9,6 +9,9 @@ import {
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import Link from 'next/link';
+import { useSession, signOut } from "next-auth/react"
+
+
 const { Header, Content, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -19,7 +22,11 @@ function getItem(label, key, icon, children) {
   };
 }
 
+
 const DashboardLayout = ({children}) => {
+
+  const { data: session } = useSession(); // github
+
   const [collapsed, setCollapsed] = useState(false);
   return (
     <Layout
@@ -40,6 +47,8 @@ padding: '10px'
             { label: <Link href="/dashboard/reviews"><FormOutlined  /> <span style={{ marginLeft: '5px'}}>Feedbacks</span></Link>},
             { label: <Link href="/dashboard/createBlog"><GoldOutlined /> <span style={{ marginLeft: '5px'}}>Upload Blogs</span></Link>},
             { label: "Logout", icon: <LogoutOutlined />, danger: true},
+            // { label: <Link href="/dashboard/createBlog"><LogoutOutlined /><span style={{ marginLeft: '5px'}}>Logout</span></Link>},
+
           ]}
             
          ></Menu>

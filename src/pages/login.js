@@ -27,15 +27,10 @@ const onSubmit = (data) => {
   createUserWithEmailAndPassword(data.email, data.password) // firebase hook
 };
 
+
 // const useUser = () => ({ user: null, loading: false })
   const router = useRouter()
  
-//   useEffect(() => {
-    // if (!(user || email)) {
-    //   router.push('/')
-    // }
-//   }, [user, loading])
-
 
   return (
     <div>

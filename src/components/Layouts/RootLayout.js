@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { DashboardOutlined, DeploymentUnitOutlined,  DownOutlined,  FacebookFilled, GoogleSquareFilled,  LinkedinFilled, LoginOutlined, MobileOutlined, PoweroffOutlined,  RobotOutlined,   TwitterSquareFilled, UserOutlined, } from '@ant-design/icons';
 import styles  from '@/styles/Home.module.css';
 import { useSession, signOut } from "next-auth/react"
-// import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
 const { Header, Content, Footer } = Layout;
 
 
@@ -14,7 +14,7 @@ const RootLayout = ({ children }) => {
 
    const { data: session } = useSession(); // github
      // firebase hooks
-  //  const [user, loading, error] = useAuthState(auth);
+  // const [user ] = useAuthState(auth);
 
   const items = [
   {
@@ -69,7 +69,7 @@ const RootLayout = ({ children }) => {
            </Link>   
            
          {
-            session?.user?.email?(
+            session?.user?.email? (
                <items style={{ margin: "0px 30px" }}>
                 <button 
                 onClick={() => signOut()}
@@ -85,6 +85,7 @@ const RootLayout = ({ children }) => {
                   Logout
                   </button>
                </items>
+
         ) :
             <Link href="/login"  className={styles.manu}>
               <items style={{padding: "10px"}}>
