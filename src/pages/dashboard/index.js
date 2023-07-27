@@ -3,7 +3,7 @@ import { useGetBlogsQuery } from '@/redux/api/apiSlice';
 import DashboardLayout from '@/components/Layouts/DashboardLayout';
 
 
-const DashboardHomePage = ({blogs}) => {
+const DashboardHomePage = ({blogs }) => {
 
 // redux
 // const {data, isLoading, isError, error} = useGetBlogsQuery()

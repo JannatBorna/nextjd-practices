@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { useGetBlogsQuery } from '@/redux/api/apiSlice';
 import { Space, Spin } from 'antd';
 import dynamic from 'next/dynamic';
+import ReviewsPage from './feedbacks/allReviews';
 
 
 const HomePage = ({allBlogs}) => {
@@ -43,6 +44,7 @@ console.log(error)
         {/* <HomeAllBlogs allBlogs={allBlogs}/> */}  {/* nextjs */}
         {/* <HomeAllBlogs allBlogs={data}/>*/} {/* redux */}
         <HomeAllBlogs allBlogs={allBlogs} /> {/* mongodb */}
+        {/* <ReviewsPage allReviews={allReviews}/> */}
     </>
   );
 };

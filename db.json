@@ -104,5 +104,40 @@
             "image_url": "/images/skin-care.jpg",
             "detaile": "If you have an interest in fashion and beauty, then creating your own beauty blog could be a great way to turn your passion into revenue. Beauty blogging is a busy niche. However, with the right type of website, hard work, and your unique spin on beauty tips and tricks, there is the potential to make it big. So how do you start a beauty.Here are other reasons why copywriting is important, especially in the skincare industry Helps to improve  your brand awareness.Good copywriting speaks to your target audience in their language.Improves the relationship between you and your customers.Skin care is a range of practices that support skin integrity, enhance its appearance, and relieve skin conditions. They can include nutrition, avoidance of excessive sun exposure, and appropriate use of emollients.Increases organic traffic to your site"
         }
+    ],
+
+    
+    "reviews": [
+        {
+            "id": "1",
+            "name": "Farsan Jiy",
+            "description": "First and foremost the most important thing that affects how a perfume smells on you is your skin type.",
+            "image_url": "/images/review-1.jpg",
+            "rating": 5
+        },
+
+        {
+            "id": "2",
+            "name": "Sweet Girl",
+            "description": "this blog are very good. A lot of good products go a long way here, which helps a lot for me. I can buy products very easily. I don't have to go to the store to buy.",
+            "image_url": "/images/review-2.jpg",
+            "rating": 4
+        },
+        {
+            "id": "3",
+            "name": "Rose",
+            "description": "First and foremost the most important thing that affects how a perfume smells on you is  I can buy products very easily. I don't have to go to the store to buy.",
+            "image_url": "/images/review-3.jpg",
+            "rating": 3
+      },
+      {
+            "id": "3",
+            "name": "Deposti Reo",
+            "description": "this blog are very good. A lot of good products go a long way here, which helps a lot fo  I can buy products very easily. I don't have to go to the store to buy.",
+            "image_url": "/images/review-4.jpg",
+            "rating": 4
+      }
     ]
+
 }
+

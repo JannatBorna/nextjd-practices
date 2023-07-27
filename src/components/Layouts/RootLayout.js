@@ -54,7 +54,7 @@ const RootLayout = ({ children }) => {
                 </items>
             </Link>    
 
-            <Link href="/feedbacks"  className={styles.manu}> 
+            <Link href="feedbacks/allReviews"  className={styles.manu}> 
               <items style={{padding: "10px"}}>
                 <RobotOutlined style={{margin: "5px"}}/>
                 Feedbacks

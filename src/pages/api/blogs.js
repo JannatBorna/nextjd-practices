@@ -15,7 +15,9 @@ async function run(req, res) {
   try {
     await client.connect();
     const blogsCollection = client.db('blogs_portal').collection('blogs');
-    // const reviewsCollection = client.db('blogs_portal').collection('reviews');
+    const reviewsCollection = client.db('blogs_portal').collection('reviews');
+    
+    // const reviewsCollection = database.collection('reviews');
 
     
 
@@ -34,16 +36,22 @@ async function run(req, res) {
     }
 
     // feedbacks
-    // if(req.method === 'GET'){
+    if(req.method === 'GET'){
+      const cursor = reviewsCollection.find({});
+      const reviews = await cursor.toArray();
+      res.send(reviews);
     // const reviews = await reviewsCollection.find({}).toArray();
     // res.send({message: "success", status: 202, data: reviews})
-  // }
+  }
 
-  // if(req.method === 'POST'){
+  if(req.method === 'POST'){
     // const reviews = req.body;
+     const review = req.body;
+     const result = await reviewsCollection.insertOne(review);
     // const result = await reviewsCollection.insertOne(reviews);
-    // res.json(result);
-  // }
+    res.json(result);
+  }
+
 
     //single post 
     // if (req.method === 'GET'){
