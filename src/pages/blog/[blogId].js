@@ -102,17 +102,16 @@ BlogDetailPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-
 export const getServerSideProps = async (context) => {
     const { params } = context;
-    const res = await fetch(`http://localhost:5000/blogs/${params.blogId}`);
+    const res = await fetch(`http://localhost:3000/api/singleBlog/singleBlog?blogId=${params.blogId}`);
     const data = await res.json();
-    // console.log(data)
+    console.log(data)
 
     return{
         props: {
           //  blogs: data, // nextjs data fetching
-           blogs: data,
+           blogs: data.data,
         }
     }
 }

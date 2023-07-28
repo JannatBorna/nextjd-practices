@@ -7,6 +7,7 @@ import Link from "next/link";
 
 
 const AllBlogsPage = ({allBlogs}) => {
+  // console.log(allBlogs)
     const {Meta} = Card;
     return (
       <>
@@ -76,7 +77,7 @@ const AllBlogsPage = ({allBlogs}) => {
                   ? blogs?.description.slice(0,70) + "..."
                   : blogs?.description}
                   </p>
-                  <Link href={`/blog/${blogs?.id}`}>
+                  <Link href={`/blog/${blogs?._id}`}>
                             <p
                         style={{
                             fontSize:"15px",
