@@ -102,7 +102,20 @@ BlogDetailPage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 
-export const getServerSideProps = async (context) => {
+
+export const getStaticPaths =async () => {
+    const res = await fetch("http://localhost:3000/api/blogs");
+    const blogs = await res.json();
+    const paths = blogs?.data.map((blog) => ({
+    params: { blogId: blog._id },
+    }))
+    return{
+    paths, fallback:false
+};
+}
+
+// export const getServerSideProps = async (context) => {
+  export const getStaticProps = async (context) => {
     const { params } = context;
     const res = await fetch(`http://localhost:3000/api/singleBlog/singleBlog?blogId=${params.blogId}`);
     const data = await res.json();
